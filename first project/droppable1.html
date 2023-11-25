@@ -1,0 +1,34 @@
+<html><head>
+    <title>droppable</title>
+    <script src="jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    
+    <style>
+        #small{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+           margin-bottom: 20px;}
+            
+
+        #big{
+            width: 400px;
+            height:400px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="small"></div>
+    <div id="big"></div>
+    <script>
+     $("#small").draggable();
+     $("#big").droppable({
+        drop: function( event, ui){
+            alert("element dropped");
+        }
+
+     });
+    </script>
+</body>
+</html>
